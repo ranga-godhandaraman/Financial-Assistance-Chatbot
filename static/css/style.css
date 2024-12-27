@@ -1,0 +1,259 @@
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: #f4f4f9; 
+    margin: 0; 
+    padding: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    min-height: 100vh;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.new-chat-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 20px;
+    transition: background-color 0.2s;
+}
+
+.new-chat-button:hover {
+    background-color: #218838;
+}
+
+.chat-sessions {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.chat-session {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #dee2e6;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.session-content {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.session-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.session-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: #6c757d;
+}
+
+.message-count {
+    color: #495057;
+}
+
+.timestamp {
+    color: #868e96;
+}
+
+.delete-chat-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0 5px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-icon {
+    font-weight: bold;
+    line-height: 1;
+}
+
+.delete-chat-btn:hover {
+    color: #c82333;
+}
+
+.chat-session:hover .delete-chat-btn {
+    opacity: 1;
+}
+
+.chat-session:hover {
+    background-color: #f1f3f5;
+}
+
+.chat-session.active {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.chat-container { 
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: calc(100% - 300px);
+    width: 90%; 
+    max-width: 800px; 
+    background: white; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.chat-header { 
+    font-size: 1.8em; 
+    font-weight: bold; 
+    color: #2c3e50; 
+    text-align: center; 
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee;
+}
+
+.session-info {
+    font-size: 0.5em;
+    color: #666;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.messages { 
+    max-height: 500px; 
+    overflow-y: auto; 
+    padding: 15px; 
+    border: 1px solid #eee; 
+    margin-bottom: 20px; 
+    border-radius: 10px;
+    background: #fafafa;
+}
+
+.message { 
+    margin: 8px 0; 
+    padding: 12px 15px; 
+    border-radius: 10px; 
+    max-width: 80%;
+    line-height: 1.4;
+}
+
+.user-message { 
+    background-color: #007bff; 
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+}
+
+.bot-message { 
+    background-color: #f8f9fa;
+    border: 1px solid #eee;
+    margin-right: auto;
+    border-bottom-left-radius: 5px;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+input { 
+    flex: 1;
+    padding: 12px; 
+    border-radius: 8px; 
+    border: 1px solid #ddd; 
+    font-size: 1em;
+}
+
+button { 
+    padding: 12px 25px; 
+    border-radius: 8px; 
+    border: none;
+    background-color: #007bff; 
+    color: white; 
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover { 
+    background-color: #0056b3; 
+}
+
+.clear-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 8px 15px;
+    font-size: 0.5em;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.clear-button:hover {
+    background-color: #c82333;
+}
+
+.suggestions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.suggestion-chip {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    background: #e9ecef;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.suggestion-chip:hover {
+    background: #dee2e6;
+}
+
+.typing-indicator {
+    display: none;
+    margin: 10px 0;
+    color: #666;
+    font-style: italic;
+}
