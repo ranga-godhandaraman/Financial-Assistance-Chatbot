@@ -94,6 +94,8 @@ personal-financial-assistant/
 ├── .env                 # Environment variables
 └── README.md           # This file
 ```
+## The Output
+![image](https://github.com/user-attachments/assets/d6d42f99-8787-4f36-ae3c-03e0d05d6abf)
 
 ## 📦 Dependencies
 
